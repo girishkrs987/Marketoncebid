@@ -98,7 +98,7 @@ public class LoginStepDefinition {
 
 	// }
 
-	@Then("^user filter Projects By project ID \"(.*)\"$")
+	@Then("^user validate Projects By searching project ID \"(.*)\"$")
 	public void user_filter_Projects_By_project(String projid) {
 		
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
@@ -183,8 +183,9 @@ public class LoginStepDefinition {
 						.visibilityOfElementLocated(By.cssSelector(BXpath+j+AXpath))); 
 				
 				String FindingProjectID=CurrentProjectID.getText();
+				System.out.println("******************************");
 				
-				System.out.println("After search project ID and Record informtion" +"  "+FindingProjectID);
+				System.out.println("After search project ID and Record informtion" + "\r\n"+ FindingProjectID);
 				//break;
 				System.out.println("******************************");
 				
@@ -204,13 +205,13 @@ public class LoginStepDefinition {
 	  .visibilityOfElementLocated(By.xpath(BXpathprojid+projid+AXpathprojid))); //
 	  ProjectColumnID.getText();
 	  
-	  System.out.println("ProjectID value Found" +"   "  +ProjectColumnID.getText());
+	  System.out.println("After Validate the  ProjectID and One Project has been found in the Application  " +" \r\n"  +ProjectColumnID.getText());
 	
 	  
 	  //Asserting Project ID column : 
 	  
 	  Assert.assertEquals(projid,ProjectColumnID.getText());
-	 
+		System.out.println("******************************");
 	  
 	  }
 	 

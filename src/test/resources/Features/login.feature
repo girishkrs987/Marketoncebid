@@ -11,7 +11,7 @@ Then user enters "automation.qa@roirocket.com" and "demopassword123"
 Then user clicks on login button
 Then user is on home page
 Then user clicks on Bids 
-Then user filter Projects By project ID "2384"
+Then user validate Projects By searching project ID "2384"
 Then Logout the Application
 Then Close the browser
  
