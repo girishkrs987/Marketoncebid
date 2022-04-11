@@ -1,12 +1,12 @@
-Feature: Marketonce Bid Project Feature
+Feature: MarketOnce
 
 
 #without Examples Keyword
 @Login 
-Scenario: Marketonce Bid Projects Test Scenario
+Scenario: MarketOnce Bid Search Test Scenario
 #
 Given user is already on Login Page
-When title of login page is Free Marketonce
+When title of login page is MarketOnce
 Then user enters "automation.qa@roirocket.com" and "demopassword123"
 Then user clicks on login button
 Then user is on home page
