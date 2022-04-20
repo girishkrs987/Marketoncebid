@@ -16,7 +16,7 @@ import managers.FileReaderManager;
 	
 		@CucumberOptions(
 				//features = "E:/MarketOne -V1/src/main/java/Features/login.feature", //the path of the feature files
-				features = "classpath:Features/login.feature",
+				features = "classpath:Features/BidProject.feature",
 				
 						//E:\MarketOne -V1\src\test\resources\Features\login.feature
 						///MarketOnce/src/test/resources/Features/login.feature
@@ -27,12 +27,12 @@ import managers.FileReaderManager;
 						//tags = {"@Login"},
 				plugin = { "pretty","html:target/cucumber-reports.html", "json:target/cucumber.json", "junit:target/cucumber.xml" },
 				monochrome = true, //display the console output in a proper readable format
-				strict = true, //it will check if any step is not defined in step definition file
+				//strict = true, //it will check if any step is not defined in step definition file
 				
 				
 				dryRun = false //to check the mapping igherkins proper between feature file and step def file
 				//tags = {"~@SmokeTest" , "~@RegressionTest", "~@End2End"}			
-						
+				
 			//	plugin = { "pretty","html:target/cucumber-reports.html", "json:target/cucumber.json", "junit:target/cucumber.xml","com.cucumber.listener.ExtentCucumberFormatter:target/cucumber-reports/report.html" }
 			
 				)
