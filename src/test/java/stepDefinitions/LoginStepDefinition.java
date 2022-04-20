@@ -277,7 +277,7 @@ WebDriver driver;
 		//*[@id="overviewQuotaGroups"]/div[1]/div[4]/div/div/div[2]/button
 		
 		//driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-		Thread.sleep(3000);
+		Thread.sleep(5000);
 		IQGRequestN.click();
 		
 		// Select all quota group
