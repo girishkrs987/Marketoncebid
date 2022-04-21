@@ -259,7 +259,7 @@ WebDriver driver;
 				// verify Launch tab status 
 				Assert.assertEquals(false, ActualLaunch);
 				
-				driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);	
+				//driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);	
 				
 	}
 	
@@ -278,8 +278,15 @@ WebDriver driver;
 		
 		//driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		Thread.sleep(5000);
-		IQGRequestN.click();
 		
+		try {
+		IQGRequestN.click();
+		}
+		
+		catch (Exception e) {
+			
+			System.out.println(e.toString());
+		}
 		// Select all quota group
 		WebElement AllQuota = new WebDriverWait(driver, 3)
 				.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//button[contains(text(),'All')]")));
@@ -294,10 +301,19 @@ WebDriver driver;
 		//System.out.println("number of selected Quota groups"+"        "+SelectedQuotas.size());
 		int checkedCount=0,uncheckedCount=0;
 		
+		// declaring var for xpath of list of checkbox items
+		
+		String LBXpath="//*[@id='";
+		String LAXpath="-bulk-edit-quota-group-value\']/div/span";
+		
+		//Webelement checkItems=driver.findElement(By.xpath(LBXpath+i+LAXpath));
+		
+		//*[@id="1-bulk-edit-quota-group-value"]/div/span
 		for(int i=0; i<SelectedQuotas.size();i++) {
-			
-			System.out.println(i+ " checkbox is selcted"+SelectedQuotas.get(i).isSelected() );
-			if(SelectedQuotas.get(i).isSelected()) {
+			//SelectedQuotas.get(i).isSelected()
+			System.out.println(i+ " checkbox is selcted"+"            "+
+					driver.findElement(By.xpath(LBXpath+i+LAXpath)).isSelected());
+			if(driver.findElement(By.xpath(LBXpath+i+LAXpath)).isSelected()) {
 				checkedCount++;
 			}
 			else {
@@ -328,7 +344,7 @@ WebDriver driver;
 				
 				Complete_Button.click();
 				
-				
+		
 	}
 	
 	

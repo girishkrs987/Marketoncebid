@@ -15,7 +15,7 @@ Then user validate Projects By searching project ID "2384"
 Then user view Project details
 Then user click Edit Project
 Then User verify Test and Lanuch tabs are in disable status
-Then User Edit Requested N and enter quota group Requested N as"8"
+Then User Edit Requested N and enter quota group Requested N as"10"
 # User enter quota group Requested N as"3"
 #Then Logout the Application
 #Then Close the browser

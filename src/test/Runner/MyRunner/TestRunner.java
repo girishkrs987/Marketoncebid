@@ -30,9 +30,9 @@ import managers.FileReaderManager;
 				//strict = true, //it will check if any step is not defined in step definition file
 				
 				
-				dryRun = false //to check the mapping igherkins proper between feature file and step def file
+				dryRun = false, //to check the mapping igherkins proper between feature file and step def file
 				//tags = {"~@SmokeTest" , "~@RegressionTest", "~@End2End"}			
-				
+				tags= "@Internal_Quota_Groups"
 			//	plugin = { "pretty","html:target/cucumber-reports.html", "json:target/cucumber.json", "junit:target/cucumber.xml","com.cucumber.listener.ExtentCucumberFormatter:target/cucumber-reports/report.html" }
 			
 				)
